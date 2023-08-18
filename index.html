@@ -480,6 +480,10 @@
 <script>
     var audio = document.getElementById("backgroundMusic");
     audio.volume = 0.05;
+    document.addEventListener('touchstart',function ()
+    {
+        document.getElementById('backgroundMusic').play();
+    })
 </script>
 <script async="" src="./main.entry.cc5728b424.js" type="module"></script>
 <script async="" src="./script.js"></script>
