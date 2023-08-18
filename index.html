@@ -1,34 +1,6 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)https://kaisermann.me/ -->
 <html class="webp" lang="en">
 <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-    <meta content="Coding for humans. Come say hi 🌳" name="description">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <meta content="-AeO98ZKBiyBlJ-1-XKUIaKp1tCLlz6zydEQ-X7P1m8" name="google-site-verification">
-    <meta content="summary_large_image" name="twitter:card">
-    <meta content="@kiwistian" name="twitter:site">
-    <meta content="@kiwistian" name="twitter:creator">
-    <meta content="https://kaisermann.me/" name="twitter:url">
-    <meta content="kaisermann | web engineer" name="twitter:title">
-    <meta content="Hi! I&#39;m Christian Kaisermann, a Carioca based in Berlin, web engineer, CSS enthusiast and avid open-sourcerer. Currently, I&#39;m focused on improving the last-mile delivery experience for Circuit..."
-          name="twitter:description">
-    <meta content="https://kaisermann.me/assets/images/big-rainbow-static.jpg" name="twitter:image">
-    <link href="https://kaisermann.me/" rel="author">
-    <link href="https://kaisermann.me/" rel="publisher">
-    <meta content="kaisermann | web engineer" itemprop="name">
-    <meta content="Hi! I&#39;m Christian Kaisermann, a Carioca based in Berlin, web engineer, CSS enthusiast and avid open-sourcerer. Currently, I&#39;m focused on improving the last-mile delivery experience for Circuit..."
-          itemprop="description">
-    <meta content="https://kaisermann.me/assets/images/big-rainbow-static.jpg" itemprop="image">
-    <meta content="https://kaisermann.me/" property="og:url">
-    <meta content="website" property="og:type">
-    <meta content="kaisermann | web engineer" property="og:title">
-    <meta content="https://kaisermann.me/assets/images/big-rainbow-static.jpg" property="og:image">
-    <meta content="Hi! I&#39;m Christian Kaisermann, a Carioca based in Berlin, web engineer, CSS enthusiast and avid open-sourcerer. Currently, I&#39;m focused on improving the last-mile delivery experience for Circuit..."
-          property="og:description">
-    <meta content="kaisermann | web engineer" property="og:site_name">
-    <meta content="en_US" property="og:locale">
-    <meta content="https://kaisermann.me" property="article:author">
     <style>*, :after, :before {
         box-sizing: border-box
     }
@@ -100,18 +72,11 @@
         }
     }
 
-    .header {
+    .js-header-date {
         position: relative;
-        min-height: 300px;
-        height: 50vh;
+        min-height: 50px;
         margin-bottom: 2.07rem;
         text-transform: uppercase
-    }
-
-    .header__container {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 100px
     }
 
     @media (min-width: 500px) {
@@ -198,6 +163,25 @@
     }
 
     .bio__photo:after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 34;
+        z-index: var(--layer-me-hover);
+        top: calc(100% + 1em);
+        left: 1rem;
+        width: 14rem;
+        padding-bottom: 14rem;
+        visibility: hidden;
+        background-size: cover
+    }
+    .photo {
+        position: relative;
+        color: #fff;
+        color: var(--text-secondary)
+    }
+
+    .photo:after {
         content: "";
         display: block;
         position: absolute;
@@ -315,7 +299,10 @@
 
     body {
         background-color: #000;
-        overflow: hidden
+        overflow: hidden;
+        background-size: cover; /* 背景图像将覆盖整个屏幕 */
+        background-repeat: no-repeat; /* 禁止背景图像重复 */
+        background-attachment: fixed; /* 固定背景图像不随滚动而移动 */
     }
 
     .space, .spaceship, .tv, .tv-content, .tv-screen, body, html {
@@ -421,12 +408,11 @@
 
         e("webp", "data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA", t), e("avif", "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAF0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgS0AAAAAABNjb2xybmNseAACAAIAAIAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAGVtZGF0EgAKBzgAPtAgIAkyUBAAAPWc41TP///4gHBX9H8XVK7gGeDllq8TYARA+8Tfsv7L+zPE24eIoIzE0WhHbrqcrTK9VEgEG/hwgB5rdCbvP8g3KYPdV88CvPJnptgQ", t)
     }(document);</script>
-    <link as="font" crossorigin="anonymous" href="https://kaisermann.me/assets/fonts/VCROSDMono.woff2" rel="preload"
-          type="font/woff2">
-    <link href="./kaisermann _ web engineer_files/main.entry.c940d9edf9.css" media="all" onload="this.media=&#39;all&#39;"
+
+    <link href="./main.entry.c940d9edf9.css" media="all" onload="this.media=&#39;all&#39;"
           rel="stylesheet">
-    <link href="https://kaisermann.me/assets/images/favicon.png" rel="icon">
-    <title>kaisermann | web engineer</title>
+    <link href="./assets/images/icon.jpg" rel="icon">
+    <title>Bingmi Wang</title>
     <noscript>
         <link href="/assets/main.entry.c940d9edf9.css" rel="stylesheet">
     </noscript>
@@ -445,160 +431,50 @@
                     <div class="tv-effect --vignette"></div>
                     <div class="tv-effect --crt"></div>
                 </div>
-                <div class="tv-content js-content"><a class="skip-link" href="https://kaisermann.me/#content">Skip to
-                    content</a>
+                <div class="tv-content js-content">
                     <div class="page-container glitchy-text">
-                        <header class="header">
-                            <div class="header__container">
-                                <nav class="nav" js-slot="nav">
-                                    <ul class="nav__breadcrumb">
-                                        <li>CK</li>
-                                    </ul>
-                                    <ul class="nav__menu">
-                                        <li><a href="https://kaisermann.me/open-source/">open-source</a></li>
-                                        <li><a href="https://kaisermann.me/websites/">websites</a></li>
-                                    </ul>
-                                </nav>
-                                <div class="header__info">
-                                    <div class="js-header-date">Aug 15, 2023</div>
-                                    <div class="js-header-controls">
-                                        <div class="channel-controller svelte-zwh9ot">
-                                            <button aria-label="previous channel"
-                                                    class="previous cursor-pointer svelte-zwh9ot">◄
-                                            </button>
-                                            <div class="channel">CHANNEL <span>08</span></div>
-                                            <button aria-label="next channel" class="next cursor-pointer svelte-zwh9ot">
-                                                ►
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <noscript>
-                                        <div role="button">CHANNEL 00</div>
-                                    </noscript>
-                                </div>
+                        <audio id="backgroundMusic" autoplay loop>
+                            <source src="./assets/One more time.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <div class="js-header-controls" hidden>
+                            <div class="channel-controller svelte-zwh9ot">
+                                <button aria-label="previous channel"
+                                        class="previous cursor-pointer svelte-zwh9ot">◄
+                                </button>
+                                <div class="channel">CHANNEL <span>08</span></div>
+                                <button aria-label="next channel" class="next cursor-pointer svelte-zwh9ot">
+                                    ►
+                                </button>
                             </div>
-                        </header>
+                        </div>
+                        <div class="js-header-date">Aug 15, 2023</div>
                         <div class="page-content" id="content" js-slot="content">
                             <article class="bio">
-                                <p class="big-text">Hi! I'm <span class="bio__photo"
-                                                                  tabindex="0">Christian Kaisermann</span>, a
-                                    <button class="button-text js-channel-trigger" data-channel="8">Carioca</button>
-                                    based in Berlin, web engineer, CSS enthusiast and avid open-sourcerer.<br><br>Currently,
-                                    I'm focused on improving the last-mile delivery experience for <a
-                                            href="https://www.getcircuit.com/" rel="noopener noreferrer"
-                                            target="_blank">Circuit Routing</a>.<br><br>I'm a very outgoing
-                                    and curious person, who's passionate about <a href="https://github.com/kaisermann"
-                                                                                  rel="noopener noreferrer"
-                                                                                  target="_blank">coding</a>,
-                                    <a href="https://instagram.com/kiwistian" rel="noopener noreferrer" target="_blank">photography,
-                                        nature, cats</a>, and <a href="https://www.last.fm/user/chrispif"
-                                                                 rel="noopener noreferrer" target="_blank">music</a>. I
-                                    love to stare at a <a href="https://justgetflux.com/" rel="noopener noreferrer"
-                                                          target="_blank">not-so-bright screen</a> while
-                                    coding on a constant state of <a
-                                            href="https://en.wikipedia.org/wiki/Flow_(psychology)" rel="noopener noreferrer"
-                                            target="_blank">Flow</a>. Here are some <a
-                                            href="https://kaisermann.me/playlists">playlists</a> to get you
-                                    going.<br><br>If you'd like to chat, feel free to reach me by <a
-                                            href="mailto:christian@kaisermann.me">e-mail</a>.
+                                <p class="big-text">BINGMI Wang<br>
+                                    an artist of vision, a poet of emotion, <a href="https://www.instagram.com/bingmi_wang/" rel="noopener noreferrer" target="_blank">a photographer</a>,
+                                    the coolest girl who breathes life into NYC.
+                                    <span class="photo photoNothing" tabindex="0">without bingmi NYC is nothing</span>.
+<br>
+                                    bingmi is also
+                                    <span class="photo photoCat" tabindex="0">a cat's mom</span>,
+                                    <span class="photo photoFlower" tabindex="0">a lover of flowers</span>,
+                                    <span class="photo photoWhiskey" tabindex="0">an aficionado of whiskey</span>,
+                                    <span class="photo photoLife" tabindex="0">A princess with fearless heart</span>, unafraid of life's challenges.
+                                    <br>
+                                    As your birthday dawns, may your life be filled with love and joy.
+                                    <button class="button-text js-channel-trigger" data-channel="8">HAPPY BIRTHDAY</button>, Dear Bingmi!!!
+
+                                    <br><br><br>
                                 </p>
                             </article>
                         </div>
-                        <footer class="footer" id="footer">
-                            <ul class="link-list">
-                                <li><a href="https://kaisermann.me/resume" rel="noopener noreferrer" target="_blank">RESUME</a>
-                                </li>
-                                <li><a href="mailto:christian@kaisermann.me" rel="noopener noreferrer" target="_blank">EMAIL</a>
-                                </li>
-                                <li><a href="https://twitter.com/kiwistian" rel="noopener noreferrer" target="_blank">TWITTER</a>
-                                </li>
-                                <li><a href="https://linkedin.com/in/kaisermann" rel="noopener noreferrer"
-                                       target="_blank">LINKEDIN</a></li>
-                            </ul>
-                            <div class="js-space-trigger">
-                                <button class="cursor-pointer svelte-6brq6f">SPACE MODE</button>
-                            </div>
-                        </footer>
                     </div>
                 </div>
                 <div class="tv-videos svelte-18atvsb">
                     <video channel="8" class="tv-video" loop="" playsinline="">
-                        <source src="/assets/videos/channel-08.webm" type="video/webm">
                         <source src="/assets/videos/channel-08.mp4" type="video/mp4">
                     </video>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="js-remote">
-    <div class="perspective svelte-1vrpccc">
-        <div class="wrapper svelte-1vrpccc">
-            <div class="remote svelte-1vrpccc">
-                <div class="inner svelte-1vrpccc">
-                    <div class="buttons svelte-1vrpccc">
-                        <div class="control onoff svelte-1vrpccc">
-                            <button class="hide-text svelte-1vrpccc">REMOTE
-                                OFF
-                            </button>
-                            <span class="svelte-1vrpccc">SPACE OFF</span></div>
-                        <div class="control vol up svelte-1vrpccc">
-                            <button class="svelte-1vrpccc">▲</button>
-                        </div>
-                        <div class="control vol down svelte-1vrpccc">
-                            <button class="svelte-1vrpccc">▼</button>
-                            <span class="svelte-1vrpccc">VOLUME</span></div>
-                        <div class="control mute svelte-1vrpccc">
-                            <button class="hide-text svelte-1vrpccc">MUTE</button>
-                            <span class="svelte-1vrpccc">MUTE</span></div>
-                        <div class="control ch up svelte-1vrpccc">
-                            <button class="svelte-1vrpccc">▲</button>
-                        </div>
-                        <div class="control ch down svelte-1vrpccc">
-                            <button class="svelte-1vrpccc">▼</button>
-                            <span class="svelte-1vrpccc">CHANNEL</span></div>
-                        <div class="numbers svelte-1vrpccc">
-                            <div class="control number svelte-1vrpccc">
-                                <button class="svelte-1vrpccc">1</button>
-                            </div>
-                            <div class="control number svelte-1vrpccc">
-                                <button class="svelte-1vrpccc">2</button>
-                            </div>
-                            <div class="control number svelte-1vrpccc">
-                                <button class="svelte-1vrpccc">3</button>
-                            </div>
-                            <div class="control number svelte-1vrpccc">
-                                <button class="svelte-1vrpccc">4</button>
-                            </div>
-                            <div class="control number svelte-1vrpccc">
-                                <button class="svelte-1vrpccc">5</button>
-                            </div>
-                            <div class="control number svelte-1vrpccc">
-                                <button class="svelte-1vrpccc">6</button>
-                            </div>
-                            <div class="control number svelte-1vrpccc">
-                                <button class="svelte-1vrpccc">7</button>
-                            </div>
-                            <div class="control number svelte-1vrpccc">
-                                <button class="svelte-1vrpccc">8</button>
-                            </div>
-                            <div class="control number svelte-1vrpccc">
-                                <button class="svelte-1vrpccc">9</button>
-                            </div>
-                            <div class="control number svelte-1vrpccc">
-                                <button class="svelte-1vrpccc">0</button>
-                            </div>
-                            <div class="control showhide svelte-1vrpccc">
-                                <button class="showhide svelte-1vrpccc">SHOW/HIDE</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="brand svelte-1vrpccc"><img alt="kiwivision"
-                                                           class="svelte-1vrpccc"
-                                                           height="10" loading="lazy" src="./kaisermann _ web engineer_files/kiwivision.svg"
-                                                           width="103">
-                        <br>
-                        <span>COMPUTER SPACE COMMAND</span></div>
                 </div>
             </div>
         </div>
@@ -609,10 +485,10 @@
     day: "numeric",
     year: "numeric"
 }).format(new Date);</script>
-<script async="" src="./kaisermann _ web engineer_files/main.entry.cc5728b424.js" type="module"></script>
-<script async="" src="./kaisermann _ web engineer_files/script.js"></script>
-<script>window.cronitor = window.cronitor || function () {
-    (window.cronitor.q = window.cronitor.q || []).push(arguments)
-}, cronitor("config", {clientKey: "996d0a943006f43ca8e6f82d5fafbb95"});</script>
+<script async="" src="./main.entry.cc5728b424.js" type="module"></script>
+<script async="" src="./script.js"></script>
+<!--<script>window.cronitor = window.cronitor || function () {-->
+<!--    (window.cronitor.q = window.cronitor.q || []).push(arguments)-->
+<!--}, cronitor("config", {clientKey: "996d0a943006f43ca8e6f82d5fafbb95"});</script>-->
 </body>
 </html>
