@@ -189,8 +189,8 @@
         z-index: var(--layer-me-hover);
         top: calc(100% + 1em);
         left: 1rem;
-        width: 14rem;
-        padding-bottom: 14rem;
+        width: 20rem;
+        padding-bottom: 20rem;
         visibility: hidden;
         background-size: cover
     }
@@ -297,13 +297,6 @@
         line-height: var(--line-height)
     }
 
-    body {
-        background-color: #000;
-        overflow: hidden;
-        background-size: cover; /* 背景图像将覆盖整个屏幕 */
-        background-repeat: no-repeat; /* 禁止背景图像重复 */
-        background-attachment: fixed; /* 固定背景图像不随滚动而移动 */
-    }
 
     .space, .spaceship, .tv, .tv-content, .tv-screen, body, html {
         height: 100%
@@ -434,7 +427,7 @@
                 <div class="tv-content js-content">
                     <div class="page-container glitchy-text">
                         <audio id="backgroundMusic" autoplay loop>
-                            <source src="./assets/One more time.mp3" type="audio/mpeg">
+                            <source src="./assets/fkj.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
                         <div class="js-header-controls" hidden>
@@ -451,19 +444,18 @@
                         <div class="js-header-date">Aug 15, 2023</div>
                         <div class="page-content" id="content" js-slot="content">
                             <article class="bio">
-                                <p class="big-text">BINGMI Wang<br>
+                                <p class="big-text">BINGMI Wang<br><br>
                                     an artist of vision, a poet of emotion, <a href="https://www.instagram.com/bingmi_wang/" rel="noopener noreferrer" target="_blank">a photographer</a>,
-                                    the coolest girl who breathes life into NYC.
+                                    the Coolest Breath of Life in NYC.
                                     <span class="photo photoNothing" tabindex="0">without bingmi NYC is nothing</span>.
-<br>
-                                    bingmi is also
+<br><br>
                                     <span class="photo photoCat" tabindex="0">a cat's mom</span>,
-                                    <span class="photo photoFlower" tabindex="0">a lover of flowers</span>,
-                                    <span class="photo photoWhiskey" tabindex="0">an aficionado of whiskey</span>,
-                                    <span class="photo photoLife" tabindex="0">A princess with fearless heart</span>, unafraid of life's challenges.
-                                    <br>
+                                    <span class="photo photoFlower" tabindex="0">Flower Enthusiast</span>,
+                                    <span class="photo photoWhiskey" tabindex="0">Whiskey Connoisseur</span>,
+                                    <span class="photo photoLife" tabindex="0">A princess with fearless heart</span>, Courageously Confronting Life's challenges.
+                                    <br><br>
                                     As your birthday dawns, may your life be filled with love and joy.
-                                    <button class="button-text js-channel-trigger" data-channel="8">HAPPY BIRTHDAY</button>, Dear Bingmi!!!
+                                    <button class="button-text js-channel-trigger" data-channel="8">HAPPY BIRTHDAY</button>, Beloved Bingmi!!!
 
                                     <br><br><br>
                                 </p>
@@ -485,10 +477,12 @@
     day: "numeric",
     year: "numeric"
 }).format(new Date);</script>
+<script>
+    var audio = document.getElementById("backgroundMusic");
+    audio.volume = 0.05;
+</script>
 <script async="" src="./main.entry.cc5728b424.js" type="module"></script>
 <script async="" src="./script.js"></script>
-<!--<script>window.cronitor = window.cronitor || function () {-->
-<!--    (window.cronitor.q = window.cronitor.q || []).push(arguments)-->
-<!--}, cronitor("config", {clientKey: "996d0a943006f43ca8e6f82d5fafbb95"});</script>-->
+
 </body>
 </html>
