@@ -456,7 +456,10 @@
                                     <br><br>
                                     As your birthday dawns, may your life be filled with love and joy.
                                     <button class="button-text js-channel-trigger" data-channel="8">HAPPY BIRTHDAY</button>, Beloved Bingmi!!!
-
+<br><br>
+                                <div class="audio-player ">
+                                    <button id="playPauseButton" class="play-button button-text js-channel-trigger">PLAY MUSIC</button>
+                                </div>
                                     <br><br><br>
                                 </p>
                             </article>
@@ -478,9 +481,35 @@
     year: "numeric"
 }).format(new Date);
 document.getElementById('backgroundMusic').play();
-document.getElementById('backgroundMusic').volume  = 0.1;
+document.getElementById('backgroundMusic').volume  = 0.05;
+
+const audio = document.getElementById("backgroundMusic");
+const playPauseButton = document.getElementById("playPauseButton");
+const volumeControl = document.getElementById("volumeControl");
+
+playPauseButton.addEventListener("click", togglePlayPause);
+volumeControl.addEventListener("input", adjustVolume);
+
+function togglePlayPause() {
+    if (audio.paused) {
+        audio.play();
+        playPauseButton.textContent = "PAUSE MUSIC";
+    } else {
+        audio.pause();
+        playPauseButton.textContent = "PLAY MUSIC";
+    }
+}
 
 
+// Update the button text and volume control when audio state changes
+audio.addEventListener("PLAY MUSIC", () => {
+    playPauseButton.textContent = "PAUSE MUSIC";
+    volumeControl.value = audio.volume;
+});
+
+audio.addEventListener("PAUSE MUSIC", () => {
+    playPauseButton.textContent = "PLAY MUSIC";
+});
 </script>
 
 <script async="" src="./main.entry.cc5728b424.js" type="module"></script>
